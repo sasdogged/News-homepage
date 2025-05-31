@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+/* Custom properties */
+:root{
+    --body-background-color: hsl(36, 100%, 99%);
+    --text-color1: hsl(236, 13%, 42%);
+    --text-color2:hsl(233, 8%, 79%);
+    --text-color-hover:hsl(5, 85%, 63%);
+    --hamburger-menu-color: hsl(240, 100%, 5%);
+    --aside-background-color:hsl(240, 100%, 5%);
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+body{
+    background-color: var(--body-background-color);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+}
+
+/* header and nav bar styling */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 3em auto 1.7em auto;
+    padding: 2em 2.6em;
+    width: 100%;
+    background-color: transparent;
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 2em;
+    padding: 0;
+}
+.mobile-nav-toggle{
+    display: none;
+}
+nav .primary-navigation{
+    display: flex;
+    gap: 2em;
+}
+.primary-navigation li{
+    list-style-type: none;
+}
+.primary-navigation li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color1);
+    transition: color 0.4s ease-in;
+}
+.primary-navigation li a:focus-visible,
+.primary-navigation li a:hover{
+    color: var(--text-color-hover);
+}
+
+/* hero section styling */
+.news{
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-block-end: 5.3em;
+}
+.headline h1{
+    font-size: clamp(2rem, 6vw, 3.5em);
+    font-weight: 900;
+    padding-block-start: .37em;
+}
+.motto{
+    margin-block: 1.7em 2.5em;
+}
+.motto p{
+    color: var(--text-color1);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding-block-end: 1.6em;
+}
+.motto button{
+    background-color: var(--text-color-hover);
+    border: 0;
+    outline: none;
+    padding: .7em 2em;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+.motto button:hover{
+    background-color: var(--aside-background-color);
+    color: var(--body-background-color);
+}
+
+/* aside-section styling */
+aside{
+    background-color: var(--aside-background-color);
+    color: #fff;
+    padding: 2em 1.7em;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 2;
+}
+aside h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+    letter-spacing: 1.7px;
+}
+aside h3{
+    font-size: 1.4rem;
+    padding-block-start: .7em;
+    transition: color 0.4s ease-in;
+}
+aside h3:hover,
+aside h3:focus-visible{
+    color: hsl(35, 77%, 62%);
+}
+aside p{
+    color: hsl(236, 13%, 63%);
+    font-size: 1.1rem;
+    padding-block-end: 1.3em;
+}
+aside div:not(:last-child){
+    border-bottom: 2px solid hsl(236, 13%, 42%);
+}
+
+/* footer styling */
+footer{
+    margin-block-start: 4em;
+}
+.flex{
+    padding-block: 1em;
+    display: flex;
+    
+    gap: 1em;
+}
+ .image  img{
+    max-width: 130px;
+    padding-block-start: .4em;
+    align-self: flex-end;
+}
+.texts h3{
+    color: var(--text-color-hover);
+    font-size: 2.2rem;
+    font-weight: 900;
+    padding-block-end: .36em;
+    letter-spacing: 1.8px;
+}
+.texts h4{
+    color: hsla(240, 100%, 10%, 1);
+    font-size: 1.37rem;
+    font-weight: 800;
+    padding-block-end: .38em;
+}
+.texts p{
+    color: var(--text-color1);
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* Media query for mobile nav bar -- Small screens */
+@media (max-width: 700px) {
+
+    header{
+        margin: .7em auto .6em auto;
+    }
+
+    .primary-navigation{
+        position: fixed;
+        flex-direction: column;
+        inset: 0 0 0 40%;
+        padding-block-start: 11em;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.35s ease-out;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .primary-navigation li a{
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    /* Styling for hamburger menu */
+    .mobile-nav-toggle{
+        position: absolute;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        flex-direction: column;
+        gap: 4.3px;
+        border: 0;
+        right: 2em;
+        top: 4.3em;
+        z-index: 9999;
+        cursor: pointer;
+        transition: transform rotate 350ms ease-out;
+    }
+
+    .mobile-nav-toggle .bar{
+        width: 100%;
+        height: 4.2px;
+        background: var(--hamburger-menu-color);
+        border-radius: 20%;
+        transition: all 0.4s ease-out;
+    }
+
+    /* Animation for hamburger menu */
+    .mobile-nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (min-width: 910px) {
+    .section{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2.5em;
+        align-items: start;
+        width: 100%;
+        max-width: 1200px;
+        margin-block: 0 3em;
+        margin-inline: auto;
+    }
+
+    main .headline-motto{
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 2em;
+        padding-top: 1em;
+    }
+    aside{
+        padding: 1em 1.7em;
+    }
+
+    footer{
+        display: flex;
+        gap: 1.7em;
+    }
+}

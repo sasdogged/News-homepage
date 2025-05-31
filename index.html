@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-3 News Home-Page</title>
+
+    <!-- Google font link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+
+     <!-- CSS link -->
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- Header /Navigation Bar -->
+    <header>
+
+        <!-- Logo -->
+            <div class="logo">
+                <img src="assets/logo.svg" alt="logo">
+            </div>
+
+        <nav>
+            <!-- Hamburger / Close Menu Button -->
+            <button aria-expanded="false" class="mobile-nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="primary-navigation" data-visible="false">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class="news">
+
+        <section class="section">
+
+            <!-- hero section -->
+           <main>
+               <div class="headline-img">
+                    <picture>
+                        <source srcset="./assets/image-web-3-mobile.jpg" media="(max-width: 700px)">
+                        <img src="./assets/image-web-3-desktop.jpg" alt="web 3">
+                    </picture>
+               </div>
+
+               <div class="headline-motto">
+                    <div class="headline">
+                        <h1>The Bright Future of Web 3.0?</h1>
+                    </div>
+
+                    <div class="motto">
+                            <p>We dive into the next evolution of the web that claims to put the power of the platform back into the hands of the people. But is it really fulfilling it's promise? </p>
+                            <button class="read-more">Read More</button>
+                    </div>
+               </div>
+               
+
+           </main>
+
+           <!-- aside section -->
+           <aside>
+
+                <h2>New</h2>
+
+                <div>
+                    <h3>Hydrogen VS Electric Cars</h3>
+                    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                </div>
+                <div>
+                    <h3>The Downsides of AI Artistry</h3>
+                    <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                </div>
+                <div>
+                    <h3>Is VC Funding Drying UP?</h3>
+                    <p>Private funding by VC firms is down 50% YOY. We take a look at what that means?</p>
+                </div>
+
+           </aside>
+
+        </section>
+
+        <!-- footer section -->
+        <footer>
+
+            <div class="retro flex">
+
+                <div class="image">
+                    <img src="./assets/image-retro-pcs.jpg" alt="Retro PCs" >
+                </div>
+
+                <div class="texts">
+                    <h3>01</h3>
+                    <h4>Reviving Retro PCs</h4>
+                    <p>What happens when old PCs are given modern upgrades?</p>
+                </div>
+                
+            </div>
+
+             <div class="laptops flex">
+
+                <div class="image">
+                    <img src="./assets/image-top-laptops.jpg" alt="keyboard" >
+                </div>
+
+                <div class="texts">
+                    <h3>02</h3>
+                    <h4>Top 10 Laptops of 2022</h4>
+                    <p>Our best picks for various needs and budgets.</p>
+                </div>
+        
+            </div>
+
+             <div class="gaming flex">
+
+                <div class="image">
+                    <img src="./assets/image-gaming-growth.jpg" alt="Retro PCs">
+                </div>
+
+                <div class="texts">
+                    <h3>03</h3>
+                    <h4>The Growth of Gaming</h4>
+                    <p>How the pandemic has sparked fresh opportunities.</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+     
+             <script src="script.js"></script>
+</body>
+</html>
