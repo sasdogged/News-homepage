@@ -32,6 +32,6 @@ Users should be able to:
 - Mobile-first workflow
 
   ### What I learned
-  --Was able to comfortable create and implement a mobile hamburger nav bar, with some animation that toggles between open and close.
-  --This project is a solo endeavour, major reason for building this was to sharpen my responsive navigation bar skills and to put what I had learned so far into practice.
+  *Was able to comfortable create and implement a mobile hamburger nav bar, with some animation that toggles between open and close.
+  *This project is a solo endeavour, major reason for building this was to sharpen my responsive navigation bar skills and to put what I had learned so far into practice.
 
